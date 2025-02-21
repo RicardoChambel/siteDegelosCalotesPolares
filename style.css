@@ -1,0 +1,96 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .5s;
+    user-select: none;
+  }
+  
+  /* Full-page background with melting ice effect */
+  body {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .sec1{
+    top: 0;
+    position: relative;
+    background: url(bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .sec2{
+    height: 100vh;
+  }
+  
+  /* Container for the text */
+  .container {
+    text-align: center;
+    backdrop-filter: blur(3px);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    animation: fadeIn .5s;
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  /* .impact-text styling */
+  .impact-text {
+    color: white;
+    transition: .5s;
+    font-size: 6vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: fadeIn .5s;
+    animation: slideUp 1s ease-in-out;
+  }
+
+  .scrollDown-text{
+    transition: .8s;
+    color: white;
+    font-size: 30px;
+    background: linear-gradient(white, white) no-repeat;
+    background-size: 0px 2px;
+    background-position: 50% 100%;
+    padding: 10px;
+    cursor: pointer;
+    animation: fadeIn 1.5s;
+  }
+  .scrollDown-text:hover{
+    background-size: 100% 2px;
+  }
+  .scrollDown-text i{
+    font-size: 20px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
